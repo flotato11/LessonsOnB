@@ -1,0 +1,164 @@
+extends  ../_skeleton
+
+block variables
+	- var activeCategory = 'pricing'
+	- var pageName = 'Pricing'
+
+block page 
+	// Page Header
+	include ../sections/_header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		img: 'images/speakers-title-bg.jpg'
+	})
+
+	
+	
+	section.section.section-lg.bg-default.text-center
+		.container
+			h3 Pricing Packages
+			.row.row-50
+				// Owl Carousel
+				.owl-carousel(data-items='1', data-md-items='2' data-lg-items='3' data-dots='true' data-nav='false' data-stage-padding='15', data-loop='false', data-margin='30', data-mouse-drag="false")
+					.pricing-corporate
+						h5.pricing-corporate-title Basic
+						.pricing-corporate-price
+							span.heading-4 $
+							p.text-accent-2 15
+						ul.pricing-corporate-list
+							li 1 Personal Lesson
+							li 3 Group Lessons
+							li 5 Workshops
+							li 3 Classes for Children
+							li Free First Lesson
+						a(href='#').button.button-default-outline.button-lg Buy Now
+					.pricing-corporate.box-pricing-selected
+						h5.pricing-corporate-title Standard
+						.pricing-corporate-price
+							span.heading-4 $
+							p.text-accent-2 49
+							.pricing-corporate-bonus
+								p bonus
+						ul.pricing-corporate-list
+							li 3 Personal Lessons
+							li 10 Group Lessons
+							li 15 Workshops
+							li 3 Classes for Teens
+							li 2 Free Lessons
+						a(href='#').button.button-gradient-secondary-2.button-lg.button-shadow Buy Now
+					.pricing-corporate
+						h5.pricing-corporate-title Premium
+						.pricing-corporate-price
+							span.heading-4 $
+							p.text-accent-2 70
+						ul.pricing-corporate-list
+							li 5 Personal Lessons
+							li 15 Group Lessons
+							li 25 Workshops
+							li 3 Classes for Adults
+							li 3 Free Lessons
+						a(href='#').button.button-default-outline.button-lg Buy Now
+						
+	section.section.section-lg.bg-gray-600.text-center
+		.container
+			h3.title-decorate.title-decorate-center Our Pricing
+			// Owl Carousel
+			.row
+				.col-12
+					.owl-carousel(data-items='1', data-lg-items='3' data-dots='true' data-nav='false' data-stage-padding='0', data-loop='false', data-margin='0', data-mouse-drag="false")
+						.box-pricing-classic
+
+							h4.pricing-classic-title Basic
+							ul.pricing-classic-list
+								li 1 Personal Lesson
+								li 3 Group Lessons
+								li 5 Workshops
+								li 3 Classes for Children
+								li Free First Lesson
+							h3.pricing-classic-price
+								span $
+								| 25
+							a(href='#').button.button-lg.button-primary Buy Now
+						.box-pricing-classic.box-pricing-selected.box-pricing-centered
+							h4.pricing-classic-title Standard
+							ul.pricing-classic-list
+								li 3 Personal Lessons
+								li 10 Group Lessons
+								li 15 Workshops
+								li 3 Classes for Teens
+								li 2 Free Lessons
+							h3.pricing-classic-price
+								span $
+								| 45
+							a(href='#').button.button-lg.button-primary Buy Now
+						.box-pricing-classic
+							h4.pricing-classic-title Premium
+							ul.pricing-classic-list
+								li 5 Personal Lessons
+								li 15 Group Lessons
+								li 25 Workshops
+								li 3 Classes for Adults
+								li 3 Free Lessons
+							h3.pricing-classic-price
+								span $
+								| 70
+							a(href='#').button.button-lg.button-primary Buy Now
+
+
+
+
+
+	section.section.section-xl.bg-gray-700.bg-decorate.bg-decorate-reverse
+		.container
+			.row
+				.col-12.text-center
+					h3.title-decorate.title-decorate-center Pricing Options
+			.row.row-50.align-items-lg-center
+				.col-lg-4
+					.box-pricing-modern
+						.box-pricing-modern-inner
+							h4.pricing-modern-title Basic
+							.pricing-modern-price
+								span $
+								p 20
+							ul.list-marked.pricing-modern-list
+								li 1 Personal Lesson
+								li 3 Group Lessons
+								li 5 Workshops
+								li 3 Classes for Children
+								li Free First Lesson
+							a(href='#').button.button-lg.button-default-outline Buy Now
+				.col-lg-4
+					.box-pricing-modern.box-pricing-selected
+						.box-pricing-modern-inner
+							h4.pricing-modern-title Standard
+							.pricing-modern-price
+								span $
+								p 45
+							ul.list-marked.pricing-modern-list
+								li 3 Personal Lessons
+								li 10 Group Lessons
+								li 15 Workshops
+								li 3 Classes for Teens
+								li 2 Free Lessons
+							a(href='#').button.button-lg.button-gradient Buy Now
+				.col-lg-4
+					.box-pricing-modern
+						.box-pricing-modern-inner
+							h4.pricing-modern-title Premium
+							.pricing-modern-price
+								span $
+								p 98
+							ul.list-marked.pricing-modern-list
+								li 5 Personal Lessons
+								li 15 Group Lessons
+								li 25 Workshops
+								li 3 Classes for Adults
+								li 3 Free Lessons
+							a(href='#').button.button-lg.button-gradient-secondary Buy Now
+
+
+	// Page Footer
+	include ../sections/_footer-classic

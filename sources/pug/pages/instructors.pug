@@ -1,0 +1,139 @@
+extends  ../_skeleton
+
+include ../components/_ui-team
+
+block variables
+	- var activeCategory = 'instructors'
+	- var pageName = 'Instructors'
+
+block page 
+	// Page Header
+	include ../sections/_header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		img: ''
+	})
+	
+	section.section.section-xl
+		.container
+			.row.no-gutters
+				.col-md-6.col-lg-4
+					.wow.fadeInUp
+						+team-classic({
+							img: 'team-classic-1-391x252',
+							name: 'Kate Anderson',
+							text: 'Founder, Senior Instructor'
+						})
+				.col-md-6.col-lg-4
+					.wow.fadeInUp
+						+team-classic({
+							img: 'team-classic-2-391x252',
+							name: 'Jessica Peterson',
+							text: 'Dance instructor, latin'
+						})
+				.col-md-6.col-lg-4
+					.wow.fadeInUp
+						+team-classic({
+							img: 'team-classic-3-391x252',
+							name: 'Richard Williams',
+							text: 'Dance instructor, House'
+						})
+				.col-md-6.col-lg-4
+					.wow.fadeInUp
+						+team-classic({
+							img: 'team-classic-4-391x252',
+							name: 'Meryl McMillan',
+							text: 'Dance instructor, Hip-Hop'
+						})
+				.col-md-6.col-lg-4
+					.wow.fadeInUp
+						+team-classic({
+							img: 'team-classic-5-391x252',
+							name: 'Henry Wilson',
+							text: 'Dance instructor, Urban'
+						})
+				.col-md-6.col-lg-4
+					.wow.fadeInUp
+						+team-classic({
+							img: 'team-classic-6-391x252',
+							name: 'Stella Clark',
+							text: 'Dance instructor, Breakdance'
+						})
+
+
+	section.section.section-xl.bg-gray-700.bg-decorate
+		.container
+			.row.row-30.align-items-lg-end
+				.col-lg-4.order-lg-2.text-lg-right
+					h3.title-decorate Instructors #2
+				.col-lg-8.order-lg-1
+					p.text-opacity-80 Morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, tristique senectus et netus et malesuada fames ac turpis egestas 
+			.row.row-30
+				.col-md-6.col-lg-4
+					+team-modern({
+						img: 'team-classic-1-391x252',
+						name: 'Kate Anderson',
+						text: 'Founder, Senior Instructor'
+					})
+				.col-md-6.col-lg-4
+					+team-modern({
+						img: 'team-classic-5-391x252',
+						name: 'Henry Wilson',
+						text: 'Dance instructor, Urban'
+					})
+				.col-md-6.col-lg-4
+					+team-modern({
+						img: 'team-classic-6-391x252',
+						name: 'Stella Clark',
+						text: 'Dance instructor, Breakdance'
+					})
+				.col-md-6.col-lg-4
+					+team-modern({
+						img: 'team-classic-3-391x252',
+						name: 'Richard Williams',
+						text: 'Dance instructor, House'
+					})
+				.col-md-6.col-lg-4
+					+team-modern({
+						img: 'team-classic-2-391x252',
+						name: 'Jessica Peterson',
+						text: 'Dance instructor, latin'
+					})
+				.col-md-6.col-lg-4
+					+team-modern({
+						classMod: 'team-modern-no-img',
+						name: 'Meryl McMillan',
+						text: 'Dance instructor, Hip-Hop'
+					})
+
+
+	section.section.section-lg.bg-default
+		.container
+			.row.justify-content-center.text-center
+				.col-md-9.col-lg-7
+					h3 Instructors #3
+					p.text-opacity-80 Morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, tristique senectus et netus et malesuada fames ac turpis egestas 
+
+			.row.row-50
+				.col-md-6.col-lg-4
+					+team-minimal({
+						img: 'team-minimal-1-370x395',
+						name: 'Richard Williams',
+						text: 'Dance instructor, House'
+					})
+				.col-md-6.col-lg-4
+					+team-minimal({
+						img: 'team-minimal-2-370x395',
+						name: 'Kate Anderson',
+						text: 'Founder, Senior Instructor'
+					})
+				.col-md-6.col-lg-4
+					+team-minimal({
+						img: 'team-minimal-3-370x395',
+						name: 'Henry Wilson',
+						text: 'Dance instructor, Urban'
+					})
+	// Page Footer
+	include ../sections/_footer-classic

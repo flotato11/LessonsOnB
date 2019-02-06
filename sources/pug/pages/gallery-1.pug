@@ -1,0 +1,85 @@
+extends  ../_skeleton
+
+include ../components/_ui-gallery-item
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Gallery #1'
+
+block page 
+	// Page Header
+	include ../sections/_header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		img: ''
+	})
+
+	section.section.section-xl.bg-default
+
+		.row.row-30(data-isotope-group='gallery')
+			.col-12.col-sm-6.col-md-4.col-lg-3
+				+gallery-item-classic({
+					img: 'gallery-1-465x383',
+					imgOriginal: 'images/gallery-home-2-1200x800-original.jpg'
+				})
+			.col-12.col-sm-6.col-md-4.col-lg-3
+				+gallery-item-classic({
+					img: 'gallery-2-465x383',
+					imgOriginal: 'images/gallery-home-1-1200x800-original.jpg'
+				})
+			.col-12.col-sm-6.col-md-4.col-lg-3
+				+gallery-item-classic({
+					img: 'gallery-3-465x383',
+					imgOriginal: 'images/gallery-home-3-1200x800-original.jpg'
+				})
+			.col-12.col-sm-6.col-md-4.col-lg-3
+				+gallery-item-classic({
+					img: 'gallery-4-465x383',
+					imgOriginal: 'images/gallery-masonry-3-1200x800-original.jpg'
+				})
+			.col-12.col-sm-6.col-md-4.col-lg-3
+				+gallery-item-classic({
+					img: 'gallery-5-465x383',
+					imgOriginal: 'images/gallery-masonry-6-1200x800-original.jpg'
+				})
+			.col-12.col-sm-6.col-md-4.col-lg-3
+				+gallery-item-classic({
+					img: 'gallery-6-465x383',
+					imgOriginal: 'images/gallery-masonry-6-1200x800-original.jpg'
+				})
+			.col-12.col-sm-6.col-md-4.col-lg-3
+				+gallery-item-classic({
+					img: 'gallery-7-465x383',
+					imgOriginal: 'images/gallery-home-8-1200x800-original.jpg'
+				})
+			.col-12.col-sm-6.col-md-4.col-lg-3
+				+gallery-item-classic({
+					img: 'gallery-8-465x383',
+					imgOriginal: 'images/gallery-home-7-1200x800-original.jpg'
+				})
+			.col-12.col-sm-6.col-md-4.col-lg-3
+				+gallery-item-classic({
+					img: 'gallery-9-465x383',
+					imgOriginal: 'images/gallery-masonry-9-1200x800-original.jpg'
+				})
+			.col-12.col-sm-6.col-md-4.col-lg-3
+				+gallery-item-classic({
+					img: 'gallery-10-465x383',
+					imgOriginal: 'images/gallery-home-4-1200x800-original.jpg'
+				})
+			.col-12.col-sm-6.col-md-4.col-lg-3
+				+gallery-item-classic({
+					img: 'gallery-11-465x383',
+					imgOriginal: 'images/gallery-home-6-1200x800-original.jpg'
+				})
+			.col-12.col-sm-6.col-md-4.col-lg-3
+				+gallery-item-classic({
+					img: 'gallery-12-465x383',
+					imgOriginal: 'images/gallery-home-5-1200x800-original.jpg'
+				})
+
+
+	// Page Footer
+	include ../sections/_footer-classic

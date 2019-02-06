@@ -1,0 +1,36 @@
+extends  ../_skeleton
+
+block variables
+	- var activeCategory = 'partners'
+	- var pageName = 'Partners'
+
+block page 
+	// Page Header
+	include ../sections/_header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		img: ''
+	})
+
+	section.section.section-lg.bg-default.text-center
+		.container
+			.wow-outer
+				.wow.slideInDown
+					h3.title-decorate.title-decorate-center Partners
+			.row.row-30
+				.col-sm-6.col-lg-3
+					a(href='#').box-sponsor.wow.fadeInUp
+						+png('logo-1-200x200')
+				.col-sm-6.col-lg-3
+					a(href='#' data-wow-delay='0.3s').box-sponsor.wow.fadeInUp
+						+png('logo-2-200x200')
+				.col-sm-6.col-lg-3
+					a(href='#' data-wow-delay='0.6s').box-sponsor.wow.fadeInUp
+						+png('logo-3-200x200')
+				.col-sm-6.col-lg-3
+					a(href='#' data-wow-delay='0.9s').box-sponsor.wow.fadeInUp
+						+png('logo-4-200x200')
+	// Page Footer
+	include ../sections/_footer-classic

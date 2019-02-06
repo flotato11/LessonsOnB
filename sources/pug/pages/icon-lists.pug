@@ -1,0 +1,110 @@
+extends  ../_skeleton
+
+include ../components/_ui-box-icon
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Icon Lists'
+
+block page 
+	// Page Header
+	include ../sections/_header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		img: ''
+	})
+
+	
+	section.section.section-lg.text-center
+		.container
+			h3 Icon List #1
+			.row.row-50
+				.col-md-6.col-lg-4.wow-outer
+					.wow.slideInLeft
+						+box-icon-classic({
+							classMod: 'icon-vector-1',
+							icon: 'linearicons-user icon-xl-color',
+							title: 'Personal Training'
+						})
+							p Personal training offers one-on-one individually designed dance sessions that perfectly fit your needs.
+				.col-md-6.col-lg-4.wow-outer
+					.wow.slideInDown
+						+box-icon-classic({
+							classMod: 'icon-vector-2 ',
+							icon: 'linearicons-group-work icon-xl-color',
+							title: 'Group Training'
+						})
+							p Group training allows you to enjoy the best dance styles while learning new moves with other students.
+				.col-md-6.col-lg-4.wow-outer
+					.wow.slideInRight
+						+box-icon-classic({
+							classMod: 'icon-vector-3',
+							icon: 'linearicons-loudspeaker icon-xl-color ',
+							title: 'Dance Workshops'
+						})
+							p If you are not sure what to pick, you can always try one of our regular dance workshops.
+
+
+
+
+
+
+	// Buttons with Icons
+	section.section.section-lg.bg-gray-700
+		.container
+			h3.text-center Icon List #2
+			.row.row-85
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						classMod: 'icon-vector-4',
+						colorMode:'color-mode-1 ',
+						number: '01',
+						title: 'Ballet'
+					})
+						p Morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						classMod: 'icon-vector-5',
+						colorMode:'color-mode-2',
+						number: '02',
+						title: 'Contemporary'
+					})
+						p Sed arcu non odio euismod lacinia at quis risus. Maecenas sed enim ut sem.
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						classMod: 'icon-vector-6',
+						colorMode:'color-mode-3',
+						number: '03',
+						title: 'Hip-Hop'
+					})
+						p Molestie nunc non blandit massa enim nec dui nunc. Volutpat blandit erat.
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						classMod: 'icon-vector-7',
+						colorMode:'color-mode-4',
+						number: '04',
+						title: 'Jazz'
+					})
+						p Tempor commodo ullamcorper a lacus vestibulum sed neque sodales ut etiam.
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						classMod: 'icon-vector-8',
+						colorMode:'color-mode-5',
+						number: '05',
+						title: 'Breakdance'
+					})
+						p Nisl purus in mollis nunc sed id semper risus natoque penatibus et magnis.
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						classMod: 'icon-vector-6',
+						colorMode:'color-mode-1',
+						number: '06',
+						title: 'Urban'
+					})
+						p Sollicitudin aliquam ultrices sagittis orci a. Proin sed libero enim sed.
+
+	
+	// Page Footer
+	include ../sections/_footer-classic

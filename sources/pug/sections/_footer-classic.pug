@@ -1,0 +1,49 @@
+footer.section.footer-classic.context-dark.decorated-section-4
+	.container
+		.row.row-50
+			.col-lg-8.order-lg-2.pl-xl-5.wow-outer
+				.wow.slideInRight
+					.row.row-50
+						.col-12
+							h5.footer-title Subscribe & Stay Updated
+							// RD Mailform
+							form.rd-mailform.text-left.rd-form-inline(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+								
+								.form-wrap
+									label.form-label(for="subscribe-email") E-mail
+									input#subscribe-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+									
+								.form-button.group-sm.text-center.text-lg-left
+									button(type="submit").button.button-primary subscribe
+						.col-md-6
+							h5.footer-title Address & Phone
+							ul.list-contact-info
+								li
+									span.icon.mdi.mdi-map-marker.icon-md.icon-secondary
+									span.list-item-text
+										a(href='#')
+											span.text-primary-light School Location
+											br
+											| 51 Francis Street, Darlinghurst NSW 2010, United States
+								li
+									span.icon.mdi.mdi-phone.icon-md.icon-secondary
+									span.list-item-text: a(href='tel:#') 1-800-123-1234
+										
+						.col-md-6
+							h5.footer-title Get Social
+							p.big Follow us to stay connected and receive instant updates.
+							ul.social-list
+								li: a(href='#').icon.icon-sm.icon-circle.icon-circle-md.icon-bg-white.fa-facebook
+								li: a(href='#').icon.icon-sm.icon-circle.icon-circle-md.icon-bg-white.fa-instagram
+								li: a(href='#').icon.icon-sm.icon-circle.icon-circle-md.icon-bg-white.fa-twitter
+								li: a(href='#').icon.icon-sm.icon-circle.icon-circle-md.icon-bg-white.fa-facebook 
+			.col-lg-4.order-lg-1.pr-xl-5.wow-outer
+				.wow.slideInLeft
+					.row.row-30
+						.col-12
+							a(href='index.html')
+								+png( logo.inverse.normal )
+						.col-12
+							p Contemp is a well-established dance school comprised of 150+ students located in San Diego, CA. We offer recreational dance classes for both adults and children in the fun atmosphere!
+							.footer-divider
+							+rights

@@ -1,0 +1,81 @@
+extends  ../_skeleton
+
+include ../components/_ui-box-icon
+
+block variables
+	- var activeCategory = 'contacts'
+	- var pageName = 'Contacts'
+
+block page 
+	// Page Header
+	include ../sections/_header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		img: ''
+	})
+	
+	section.section.section-lg.text-center.bg-default
+		.container
+			.row.row-50
+				.col-md-6.col-lg-4
+					+box-icon-classic({
+						classMod: 'icon-vector-1',
+						icon: 'linearicons-phone-incoming icon-xl-color',
+						link: 'tel:#',
+						title: '1-800-123-1234'
+					})
+						p You can call us anytime
+				.col-md-6.col-lg-4
+					+box-icon-classic({
+						classMod: 'icon-vector-2',
+						icon: 'linearicons-map2 icon-xl-color',
+						title: '51 Francis Street, Darlinghurst NSW 2010, United States'
+					})
+						
+				.col-md-6.col-lg-4
+					+box-icon-classic({
+						classMod: 'icon-vector-3',
+						icon: 'linearicons-paper-plane icon-xl-color',
+						link: 'mailto:#',
+						title: 'info@demolink.org'
+					})
+						p Feel free to email us your questions
+
+
+
+
+
+	// Contact us
+	section.section.section-lg.bg-gray-1.text-center.decorated-section-1
+		.container
+			.row.justify-content-md-center
+				.col-md-9.col-lg-7
+					h3 Contact Form
+					// RD Mailform
+					form.rd-form.rd-mailform(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+
+						.form-wrap
+							input#contact-name.form-input(type='text' name='name' data-constraints='@Required')
+							label.form-label(for='contact-name') Your Name
+
+						.form-wrap
+							input#contact-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+							label.form-label(for='contact-email') E-mail
+
+						.form-wrap
+							input#contact-phone.form-input(type='text' name='phone' data-constraints='@Numeric')
+							label.form-label(for='contact-phone') Phone
+
+
+						.form-wrap
+							label.form-label(for='contact-message')  Message
+							textarea#contact-message.form-input(name='message' data-constraints='@Required')
+
+						.row.justify-content-center
+							.col-12.col-sm-7.col-lg-5
+								button.button.button-block.button-lg.button-primary(type='submit') Send
+	
+	// Page Footer
+	include ../sections/_footer-classic

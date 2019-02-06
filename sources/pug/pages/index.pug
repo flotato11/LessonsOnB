@@ -1,0 +1,466 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-pagination
+include ../components/_ui-box-icon
+include ../components/_ui-team
+include ../components/_ui-posts
+include ../components/_ui-gallery-item
+include ../components/_ui-event-item
+
+block variables
+	- var activeCategory = 'home'
+	- var pageName = 'Home'
+
+block page
+	// Page Header
+	include ../sections/_header-modern
+
+	// Swiper
+	section.section.section-lg.section-main-bunner.bg-light-filter
+		.main-bunner-img.decorated-section-5(style='background-image: url("images/bg-bunner-1.jpg"); background-size: cover;')
+		.main-bunner-inner
+			.container
+				.row.row-50.justify-content-lg-between.align-items-lg-center
+					.col-lg-9.col-xl-8.order-lg-1
+						h5.bunner-location.d-flex.align-items-center
+							span.icon.mdi.mdi-map-marker.icon-secondary
+							a(href='#').text-opacity-80 july 05-09, 2018,
+								br.d-sm-none
+								|  Los angeles, ca
+						h1 urban Dance Masterclass
+						.countdown-primary
+							.countdown(data-type='until', data-time='17 Dec 2018 16:00', data-format='dhms')
+
+	// Box icon
+	section.section.section-lg.bg-gray-1.decorated-section-1
+		.container
+			.row.row-50
+				.col-md-6.col-lg-4.wow-outer
+					.wow.slideInLeft
+						+box-icon-classic({
+							classMod: 'icon-vector-1',
+							icon: 'linearicons-user icon-xl-color',
+							title: 'Personal Training'
+						})
+							p Personal training offers one-on-one individually designed dance sessions that perfectly fit your needs.
+				.col-md-6.col-lg-4.wow-outer
+					.wow.slideInDown
+						+box-icon-classic({
+							classMod: 'icon-vector-2 ',
+							icon: 'linearicons-group-work icon-xl-color',
+							title: 'Group Training'
+						})
+							p Group training allows you to enjoy the best dance styles while learning new moves with other students.
+				.col-md-6.col-lg-4.wow-outer
+					.wow.slideInRight
+						+box-icon-classic({
+							classMod: 'icon-vector-3',
+							icon: 'linearicons-loudspeaker icon-xl-color ',
+							title: 'Dance Workshops'
+						})
+							p If you are not sure what to pick, you can always try one of our regular dance workshops.
+
+
+
+
+
+
+	// Team
+	section.section.section-xl
+		.container
+			.row.row-30.justify-content-center.text-center
+				.col-12.wow-outer
+					.wow.slideInDown
+						h3.title-decorate.title-decorate-center Instructors
+				.col-lg-8.wow-outer
+					.wow.fadeInUp
+						p Since our establishment, we have gathered a team of more than 20 dance instructors who have experience in various dance styles.
+			.row.no-gutters
+				.col-md-6.col-lg-4
+					.wow.fadeInUp
+						+team-classic({
+							img: 'team-classic-1-391x252',
+							name: 'Kate Anderson',
+							text: 'Founder, Senior Instructor'
+						})
+				.col-md-6.col-lg-4
+					.wow.fadeInUp
+
+						+team-classic({
+							img: 'team-classic-2-391x252',
+							name: 'Jessica Peterson',
+							text: 'Dance instructor, latin'
+						})
+				.col-md-6.col-lg-4
+					.wow.fadeInUp
+						+team-classic({
+							img: 'team-classic-3-391x252',
+							name: 'Richard Williams',
+							text: 'Dance instructor, House'
+						})
+				.col-md-6.col-lg-4
+					.wow.fadeInUp
+						+team-classic({
+							img: 'team-classic-4-391x252',
+							name: 'Meryl McMillan',
+							text: 'Dance instructor, Hip-Hop'
+						})
+				.col-md-6.col-lg-4
+					.wow.fadeInUp
+						+team-classic({
+							img: 'team-classic-5-391x252',
+							name: 'Henry Wilson',
+							text: 'Dance instructor, Urban'
+						})
+				.col-md-6.col-lg-4
+					.wow.fadeInUp
+						+team-classic({
+							img: 'team-classic-6-391x252',
+							name: 'Stella Clark',
+							text: 'Dance instructor, Breakdance'
+						})
+
+
+	// Tabs
+	section.section-lg.section.bg-gray-1.decorated-section-2
+		.container
+			.row.justify-content-center
+				.col-lg-10.col-xl-9.text-center.wow-outer
+					.wow.slideInLeft
+						h3.title-decorate.title-decorate-center Classes Description & Schedule
+						p Below you can read more about our dance classes and their schedule. Our instructors offer various types of classes in a lot of different dance styles. You can learn more about our classes below.
+			#tabs-1.tabs-custom.tabs-horizontal.tabs-modern
+				.row.no-gutters
+					.col-lg-4.col-xl-3.order-lg-2.wow-outer
+						.wow.slideInRight
+							ul.nav.nav-tabs.nav-tabs-modern
+								li.nav-item(role='presentation'): a.nav-link.active(href='#tabs-1-1' data-toggle='tab') Basic
+								li.nav-item(role='presentation'): a.nav-link(href='#tabs-1-2' data-toggle='tab') Intermediate
+								li.nav-item(role='presentation'): a.nav-link(href='#tabs-1-3' data-toggle='tab') Advanced
+								li.nav-item(role='presentation'): a.nav-link(href='#tabs-1-4' data-toggle='tab') Professional
+							a(href='#').button.button-lg.button-primary.button-tabs-modern Book a free lesson
+					.col-lg-8.col-xl-9.order-lg-1.wow-outer
+						.wow.slideInLeft
+							.tab-content
+								div#tabs-1-1.tab-pane.fade.show.active
+									+event-item-classic({
+										img: 'user-1-109x109',
+										eventTime: 'Monday 9:00 am - 10:00 am ',
+										title: 'Hip-Hop  Techniques (Group Lesson)',
+										speaker: 'Meryl McMillan'
+									})
+									+event-item-classic({
+										img: 'user-2-109x109',
+										eventTime: 'Tuesday 11:00 am - 12:00 pm ',
+										title: 'Urban Dance Class (Teens & Adults)',
+										speaker: 'Henry Wilson',
+										eventText: true,
+										eventLocation: 'Contemp Training Hall'
+									})
+										p Learn the basics of Urban Dance during a series of classes conducted by our certified and award-winning teacher Henry Wilson.
+									+event-item-classic({
+										eventColection: true,
+										listImg: [
+											{img: 'user-1-60x60'},
+											{img: 'user-2-60x60'},
+											{img: 'user-3-60x60'}
+										],
+										eventTime: 'Wednesday 1:00 pm - 2:00 pm',
+										title: 'Contemporary Dance Workshop (Urban/Breakdance)',
+										listSpeaker: [
+											{speaker: 'M. McMillan,'},
+											{speaker: 'H. Wilson,'},
+											{speaker: 'K. Anderson'}
+										]
+									})
+									+event-item-classic({
+										img: 'user-3-109x109',
+										eventTime: 'Thursday 3:00 pm - 4:00 pm ',
+										title: 'Personal House Dance Class',
+										speaker: 'Richard Williams'
+									})
+
+								div#tabs-1-2.tab-pane.fade
+									+event-item-classic({
+										img: 'user-1-109x109',
+										eventTime: '1:00 pm - 3:00 pm ',
+										title: 'Hip-Hop Techniques (Group Lesson)',
+										speaker: 'Meryl McMillan'
+									})
+									+event-item-classic({
+										img: 'user-2-109x109',
+										eventTime: '3:00 pm - 5:00 pm ',
+										title: 'Urban Dance Class (Teens & Adults)',
+										speaker: 'Henry Wilson',
+										eventText: true,
+										eventLocation: 'Contemp Training Hall'
+									})
+										p Learn the basics of Urban Dance during a series of classes conducted by our certified and award-winning teacher Henry Wilson.
+
+									+event-item-classic({
+										img: 'user-3-109x109',
+										eventTime: '11:00 am - 1:00 pm ',
+										title: 'Personal House Dance Class',
+										speaker: 'Richard Williams'
+									})
+									+event-item-classic({
+										eventColection: true,
+										listImg: [
+											{img: 'user-1-60x60'},
+											{img: 'user-2-60x60'},
+											{img: 'user-3-60x60'}
+										],
+										eventTime: '9:00 am - 11:00 am ',
+										title: 'Contemporary Dance Workshop (Urban/Breakdance)',
+										listSpeaker:  [
+											{speaker: 'M. McMillan,'},
+											{speaker: 'H. Wilson,'},
+											{speaker: 'K. Anderson'}
+										]
+									})
+								div#tabs-1-3.tab-pane.fade
+									+event-item-classic({
+										eventColection: true,
+										listImg: [
+											{img: 'user-1-60x60'},
+											{img: 'user-2-60x60'},
+											{img: 'user-3-60x60'}
+										],
+										eventTime: '9:00 am - 11:00 am ',
+										title: 'Contemporary Dance Workshop (Urban/Breakdance)',
+										listSpeaker:  [
+											{speaker: 'M. McMillan,'},
+											{speaker: 'H. Wilson,'},
+											{speaker: 'K. Anderson'}
+										]
+									})
+									+event-item-classic({
+										img: 'user-2-109x109',
+										eventTime: '1:00 pm - 3:00 pm ',
+										title: 'Urban Dance Class (Teens & Adults)',
+										speaker: 'Henry Wilson',
+										eventText: true,
+										eventLocation: 'Contemp Training Hall'
+									})
+										p Learn the basics of Urban Dance during a series of classes conducted by our certified and award-winning teacher Henry Wilson.
+									+event-item-classic({
+										img: 'user-3-109x109',
+										eventTime: '11:00 am - 1:00 pm ',
+										title: 'Personal House Dance Class',
+										speaker: 'Richard Williams'
+									})
+
+
+								div#tabs-1-4.tab-pane.fade
+
+									+event-item-classic({
+										img: 'user-3-109x109',
+										eventTime: '9:00 am - 11:00 am ',
+										title: 'Personal House Dance Class',
+										speaker: 'Richard Williams'
+									})
+
+									+event-item-classic({
+										img: 'user-2-109x109',
+										eventTime: 'Tuesday 11:00 am - 12:00 pm ',
+										title: 'Urban Dance Class (Teens & Adults)',
+										speaker: 'Henry Wilson',
+										eventText: true,
+										eventLocation: 'Contemp Training Hall'
+									})
+										p Learn the basics of Urban Dance during a series of classes conducted by our certified and award-winning teacher Henry Wilson.
+
+
+
+	// Partners
+	section.section.section-lg.bg-default.text-center
+		.container
+			.wow-outer
+				.wow.slideInDown
+					h3.title-decorate.title-decorate-center Partners
+			.row.row-30
+				.col-sm-6.col-lg-3
+					a(href='#').box-sponsor.wow.fadeInUp
+						+png('logo-1-200x200')
+				.col-sm-6.col-lg-3
+					a(href='#' data-wow-delay='0.3s').box-sponsor.wow.fadeInUp
+						+png('logo-2-200x200')
+				.col-sm-6.col-lg-3
+					a(href='#' data-wow-delay='0.6s').box-sponsor.wow.fadeInUp
+						+png('logo-3-200x200')
+				.col-sm-6.col-lg-3
+					a(href='#' data-wow-delay='0.9s').box-sponsor.wow.fadeInUp
+						+png('logo-4-200x200')
+	// Pricing
+	section.section.section-xl.bg-accent-dark.text-center.decorated-section-3
+		.container.wow.FadeIn
+			h3.title-decorate.title-decorate-center Our Pricing Plans
+			// Owl Carousel
+			.row
+				.col-12
+					.owl-carousel(data-items='1', data-lg-items='3' data-dots='true' data-nav='false' data-stage-padding='0', data-loop='false', data-margin='0', data-mouse-drag="false")
+						.box-pricing-classic
+
+							h4.pricing-classic-title Basic
+							ul.pricing-classic-list
+								li 1 Personal Lesson
+								li 3 Group Lessons
+								li 5 Workshops
+								li 3 Classes for Children
+								li Free First Lesson
+							h3.pricing-classic-price
+								span $
+								| 25
+							a(href='#').button.button-lg.button-primary Buy Now
+						.box-pricing-classic.box-pricing-selected.box-pricing-centered
+							h4.pricing-classic-title Standard
+							ul.pricing-classic-list
+								li 3 Personal Lessons
+								li 10 Group Lessons
+								li 15 Workshops
+								li 3 Classes for Teens
+								li 2 Free Lessons
+							h3.pricing-classic-price
+								span $
+								| 45
+							a(href='#').button.button-lg.button-primary Buy Now
+						.box-pricing-classic
+							h4.pricing-classic-title Premium
+							ul.pricing-classic-list
+								li 5 Personal Lessons
+								li 15 Group Lessons
+								li 25 Workshops
+								li 3 Classes for Adults
+								li 3 Free Lessons
+							h3.pricing-classic-price
+								span $
+								| 70
+							a(href='#').button.button-lg.button-primary Buy Now
+
+
+
+
+
+	// Gallery
+	section.section.section-lg.bg-default.text-center.section-bottom-0
+		.container
+			.row.justify-content-center
+				.col-lg-8.col-xl-7.wow-outer
+					.wow.slideInDown
+						h3.title-decorate.title-decorate-center Our Gallery
+						p Below you can take a look at the best moments from our classes and workshops organized by our instructors at Contemp Dance School. They also include photos of our best students.
+		.row.isotope-wrap
+			// Isotope Content
+			.col-lg-12
+				.isotope(data-isotope-layout='masonry', data-isotope-group='gallery' data-lightgallery='group' data-lg-thumbnail='false' )
+					.row.no-gutters.row-condensed
+						.col-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Category 2').wow-outer
+							.wow.fadeInUp
+								+gallery-item-classic({
+									img: 'gallery-home-1-480x215',
+									imgOriginal: 'images/gallery-home-1-1200x800-original.jpg'
+								})
+						.col-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Category 1').wow-outer
+							.wow.fadeInUp
+								+gallery-item-classic({
+									img: 'gallery-home-2-480x339',
+									imgOriginal: 'images/gallery-home-2-1200x800-original.jpg'
+								})
+						.col-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Category 1').wow-outer
+							.wow.fadeInUp
+								+gallery-item-classic({
+									img: 'gallery-home-3-480x611',
+									imgOriginal: 'images/gallery-home-3-1200x800-original.jpg'
+								})
+						.col-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Category 1').wow-outer
+							.wow.fadeInUp
+								+gallery-item-classic({
+									img: 'gallery-home-4-480x546',
+									imgOriginal: 'images/gallery-home-4-1200x800-original.jpg'
+								})
+						.col-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Category 2').wow-outer
+							.wow.fadeInUp
+								+gallery-item-classic({
+									img: 'gallery-home-6-480x445',
+									imgOriginal: 'images/gallery-home-6-1200x800-original.jpg'
+								})
+						.col-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Category 1').wow-outer
+							.wow.fadeInUp
+								+gallery-item-classic({
+									img: 'gallery-home-5-480x339',
+									imgOriginal: 'images/gallery-home-5-1200x800-original.jpg'
+								})
+						.col-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Category 2').wow-outer
+							.wow.fadeInUp
+								+gallery-item-classic({
+									img: 'gallery-home-8-480x378',
+									imgOriginal: 'images/gallery-home-8-1200x800-original.jpg'
+								})
+						.col-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Category 2').wow-outer
+							.wow.fadeInUp
+								+gallery-item-classic({
+									img: 'gallery-home-7-480x313',
+									imgOriginal: 'images/gallery-home-7-1200x800-original.jpg'
+								})
+						.col-1
+
+
+	section.section.text-center
+		+parallax({
+			img: 'parallax-img-1.jpg',
+			innerClass: 'section-xl context-dark text-center bg-dark-filter'
+		})
+			.container: .row.justify-content-md-center: .col-md-10.wow-outer
+				.wow.fadeInUp
+					h3.title-decorate-center.title-decorate.font-weight-regular Take Your First Dance Lesson for Free
+					a(href='#').button.button-xl.button-primary Book a lesson
+
+	section.section.section-lg.bg-gray-1
+		.container
+			.row.row-50
+				.col-12.text-center
+					h3.title-decorate.title-decorate-center Latest News
+				.col-md-6.col-lg-4.wow-outer
+					.wow.fadeInUp
+						+post-modern({
+							img: 'post-modern-1-370x252',
+							badgeMod: 'badge-primary',
+							badge: 'Dance',
+							date: 'May 11, 2018',
+							title: 'Popular Contemporary Dance Techniques'
+						})
+				.col-md-6.col-lg-4.wow-outer
+					.wow.slideInDown
+						+post-modern({
+							classMod: 'post-modern-reverse',
+							img: 'post-modern-2-370x252',
+							badgeMod: 'badge-secondary',
+							badge: 'news',
+							date: 'April 25, 2018',
+							title: 'Registration For Children & Teen Programs Is Now Open!'
+						})
+				.col-md-6.col-lg-4.wow-outer
+					.wow.fadeInUp
+						+post-modern-text({
+							badgeMod: 'badge-pink',
+							badge: 'Tips',
+							date: 'July 02, 2018',
+							title: '5 Ways To Pick The Best Music For Dance'
+						})
+							p Choreographers often find music for dances in the same place: from other dancers, making it tough to use something unique. Avoid overused composers and songs with these 5 tips. First, we recommend to search through the popular music websites as they have a variety of playlists with indie and...
+
+
+
+
+
+
+	section.section.decorated-section-1
+		.google-map-container( data-center='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-styles='[{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]' data-zoom='5')
+			.google-map
+			ul.google-map-markers
+				li( data-location='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-description='9870 St Vincent Place, Glasgow', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker.png' )
+
+
+	// Page Footer
+	include ../sections/_footer-classic

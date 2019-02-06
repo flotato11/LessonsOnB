@@ -1,0 +1,91 @@
+extends  ../_skeleton
+
+include ../components/_ui-posts
+include ../components/_ui-pagination
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'News 2'
+
+block page 
+	// Page Header
+	include ../sections/_header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		img: ''
+	})
+
+
+	section.section.section-lg
+		.container
+			.row.row-50
+				.col-md-6.col-lg-4
+					+post-modern({
+						img: 'post-classic-4-370x255',
+						badgeMod: 'badge-primary',
+						badge: 'Dance',
+						date: 'May 11, 2018',
+						title: 'Popular Contemporary Dance Techniques'
+					})
+				.col-md-6.col-lg-4
+					+post-modern({
+						classMod: 'post-modern-reverse',
+						img: 'post-modern-2-370x255',
+						badgeMod: 'badge-secondary',
+						badge: 'news',
+						date: 'April 25, 2018',
+						title: 'Registration For Children & Teen Programs Is Now Open!'
+					})
+				.col-md-6.col-lg-4
+					+post-modern-text({
+						badge: 'Dance',
+						date: 'July 02, 2018',
+						title: 'Top 8 Contemporary Dance Events This Year'
+					})
+						p Eabitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. 
+
+				.col-md-6.col-lg-4
+					+post-modern({
+						classMod: 'post-modern-reverse',
+						img: 'post-classic-1-370x255',
+						badgeMod: 'badge-secondary',
+						badge: 'Tips',
+						date: 'April 25, 2018',
+						title: '5 Ways To Pick The Best Music For Dance'
+					})
+				.col-md-6.col-lg-4
+					+post-modern({
+						img: 'post-classic-3-370x255',
+						badgeMod: 'badge-secondary',
+						badge: 'news',
+						date: 'May 11, 2018',
+						title: 'Top 10 Popular Contemporary Dance Styles'
+					})
+				.col-md-6.col-lg-4
+					+post-modern({
+						classMod: 'post-modern-reverse',
+						img: 'post-classic-2-370x255',
+						badgeMod: 'badge-secondary',
+						badge: 'Tips',
+						date: 'April 25, 2018',
+						title: 'Tips for Improving Your Contemporary Dancing'
+					})
+				.col-md-6.col-lg-4
+					+post-modern({
+						img: 'post-classic-8-370x255',
+						badgeMod: 'badge-primary',
+						badge: 'Dance',
+						date: 'May 11, 2018',
+						title: 'How Dancers Cope with Mental Stress'
+					})
+				.col-md-6.col-lg-4
+					+post-modern-text({
+						badge: 'Tips',
+						date: 'July 02, 2018',
+						title: 'Professional Dancers Recommend: Health Tips'
+					})
+						p Viverra aliquet eget sit amet. Congue nisi vitae suscipit tellus mauris a diam. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Neque egestas congue quisque egestas diam in arcu cursus. In nisl nisi scelerisque eu ultrices. Diam vulputate ut pharetra sit mauris augue neque gravida.
+	// Page Footer
+	include ../sections/_footer-classic
