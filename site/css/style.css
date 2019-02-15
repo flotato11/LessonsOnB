@@ -18,6 +18,7 @@
 :root {
   --color1: rgb(100, 181, 246); /*light blue*/
   --color2: rgb(141, 196, 161); /*main green*/
+  --color3: rgba(141, 196, 161,0.5); /*main green*/
 }
 
 
@@ -1371,8 +1372,8 @@ a[href*='tel'], a[href*='mailto'] {
 
 .team-item-info-name .team-item-info-name-text {
   border-radius: 4px;
-  background: #F9C9C9;
-  padding: 2px 4px;
+  background: var(--color3);
+  padding: 2px 10px;
 }
 
 .team-item-info-name *+.team-item-info-name-text {
@@ -2569,7 +2570,7 @@ img {
 }
 
 .icon-secondary {
-  color: #F6A673;
+  color: var(--color2);
 }
 
 .icon-bg-white {
@@ -4403,7 +4404,7 @@ ul.blog-post-meta li .icon {
   top: 52%;
   right: -5px;
   display: inline-block;
-  background: #F6A673;
+  background: var(--color2);
   transform: translate3d(0, -50%, 0);
 }
 
@@ -5824,7 +5825,7 @@ html [class*='section-'].section-bottom-0 {
     transform: rotate(160deg);
     width: 609px;
     height: 420px;
-    background: url("../images/vector.png") no-repeat;
+    background: url("../images/vector.svg") no-repeat;
     z-index: 1;
     animation: vector-img 10s infinite;
   }
@@ -5873,7 +5874,7 @@ html [class*='section-'].section-bottom-0 {
     top: 0;
     width: 609px;
     height: 420px;
-    background: url("../images/vector.png") no-repeat;
+    background: url("../images/vector.svg") no-repeat;
     animation: bunner-img 10s infinite;
   }
 
