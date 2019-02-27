@@ -23,9 +23,16 @@
 
 
 :root {
-  --color1: rgb(100, 181, 246); /*light blue*/
   --color2: rgb(141, 196, 161); /*main green*/
   --color3: rgba(141, 196, 161,0.5); /*main green*/
+  --animcolor100: rgb(141, 196, 161);
+  --animcolor80: rgba(141, 196, 161, .8);
+  --animcolor60: rgba(141, 196, 161, .6);
+  --animcolor40: rgba(141, 196, 161, .4);
+  --animcolor20: rgba(141, 196, 161, .2);
+  --animwidth: 25px;
+  --animheight: 100px;
+  --animtime: 2s;
 }
 
 
@@ -115,6 +122,28 @@
 .bg-green [class^='heading-'],
 .box-countdown-dark [class^='heading-'] {
   color: white;
+}
+
+.main {
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  transform: translate(-50%,-50%)
+}
+
+.bars:nth-child(1) {
+  width: var(--animwidth);
+  height: var(--animheight);
+  background: var(--animcolor40);
+  float: left;
+  margin-right: 4px;
+  border-radius: 3px 3px 0 0;
+  animation: music-1 var(--animtime) ease-in-out;
+  transform-origin: bottom;
+}
+
+.bars:hover{
+  background: var(--animcolor80);
 }
 
 a:focus,
