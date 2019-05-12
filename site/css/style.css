@@ -420,6 +420,33 @@ h3,
   line-height: 1.5;
 }
 
+.mlfaa {
+  position: absolute;
+  font-size: 40px;
+  top: 66%;
+  margin: auto;
+  left: -33%;
+}
+
+.intromeme {
+  margin-top: 50px;
+  margin-left: 40px;
+  left: 80px;
+}
+
+@media (max-width: 1000px) {
+  .mlfaa {
+    position: absolute;
+    bottom: 0%;
+    font-size: 20px;
+    left: 18%;
+  }
+
+  .intromeme {
+    left: -5px;
+  }
+}
+
 @media (min-width: 1200px) {
 
   h3,
@@ -5435,6 +5462,12 @@ h3+.group-xl {
 .section-lg,
 .section-xl {
   padding: 70px 0;
+}
+
+@media (max-width: 1200px) {
+  .section-lg {
+    padding: 20px 0;
+  }
 }
 
 .section-xxl {
